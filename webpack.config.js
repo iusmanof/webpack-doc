@@ -5,6 +5,12 @@ module.exports = {
     entry: './src/index.js',
     output: {
         path: path.resolve(__dirname, 'dist'),
-        filename: 'qwidbuo.js'
-    }
+        filename: 'index.js' // default: main.js
+    },
+    module: {
+        rules: [{
+            test: /\.css$/i,
+            use: ['style-loader', 'css-loader'],
+        }, ],
+    },
 };
