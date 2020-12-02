@@ -1,4 +1,6 @@
-import './style.css'
+
+
+import css from "./style.css";
 
 // html
 // css
