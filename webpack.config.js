@@ -3,10 +3,18 @@ const HtmlWebpackPlugin = require('html-webpack-plugin');
 const { CleanWebpackPlugin } = require('clean-webpack-plugin');
 
 module.exports = {
+    mode: 'development',
     entry: './src/index.js',
     output: {
         path: path.resolve(__dirname, 'dist'),
-        filename: 'index.js' // default: main.js
+        filename: 'index.js', // default: main.js
+        publicPath: '/',
+    },
+    devtool: 'inline-source-map',  // readable src code in dist/
+    devServer: {
+        contentBase: './dist',
+        // port: 9000,
+        // open: true
     },
     module: {
         rules: [{
@@ -30,7 +38,7 @@ module.exports = {
         }, ],
     },
     plugins: [
-        new CleanWebpackPlugin(),
+        new CleanWebpackPlugin({ cleanStaleWebpackAssets: false }),
         new HtmlWebpackPlugin({
             title: 'Web Dev',
         }),

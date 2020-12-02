@@ -8,3 +8,4 @@ import  "./style.css";
 // js 
 // hmr 
 // cleaner +
+// normalize
