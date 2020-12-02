@@ -1,12 +1,10 @@
+import  "./style.css";
 
-
-import css from "./style.css";
-
-// html
+// html +
 // css
-// afterprefixer
+// afterprefixer +
 // webpack dev
 // copy folder
 // js 
 // hmr 
-// cleaner
+// cleaner +
